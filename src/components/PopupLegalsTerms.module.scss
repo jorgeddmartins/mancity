@@ -1,0 +1,40 @@
+@use '@styles/base' as *;
+
+.termsContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(20);
+  background-image: url('../assets/img/shipblue.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center rem(20);
+  padding: rem(80) rem(20) rem(42);
+  box-sizing: border-box;
+  .title {
+    @extend %h1;
+    text-transform: uppercase;
+    color: $color-midnightBlue;
+  }
+  .topParagraph {
+    @extend %paragraphLarge;
+    color: $color-black;
+    a {
+      color: $color-black;
+    }
+  }
+  .bottomParagraph {
+    @extend %paragraph;
+    color: #a2a2a2;
+    a {
+      color: #a2a2a2;
+    }
+  }
+
+  .checkTerms {
+    display: flex;
+    column-gap: rem(35);
+    .checkTermsText {
+      @extend %label;
+    }
+  }
+}

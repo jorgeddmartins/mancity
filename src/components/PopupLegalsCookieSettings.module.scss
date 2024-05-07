@@ -1,0 +1,87 @@
+@use '@styles/base' as *;
+
+.wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(164.94deg, #3bd6ff 72.68%, #e6ff00 153.68%);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  .wrapContainer {
+    background-image: url('../assets/img/ship.svg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center rem(110);
+    padding: rem(15) rem(27) rem(41) rem(27);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+    .content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      height: 100%;
+
+      .logo {
+        width: rem(90);
+        height: rem(90);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: rem(20) auto;
+      }
+      h1 {
+        @extend %h1;
+        color: $color-midnightBlue;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: rem(8);
+        padding-bottom: rem(43);
+      }
+      .settingsContent {
+        display: flex;
+        flex-direction: column;
+        .dataChecks {
+          display: flex;
+          column-gap: rem(36);
+          &:first-of-type {
+            padding-bottom: rem(40);
+          }
+          &:last-of-type {
+            padding-bottom: rem(40);
+          }
+        }
+        h4 {
+          @extend %h4;
+          font-weight: 700;
+          color: $color-midnightBlue;
+          text-transform: uppercase;
+        }
+        p {
+          @extend %h4;
+          font-weight: 400;
+          font-size: rem(13);
+          line-height: rem(18);
+          color: $color-midnightBlue;
+          margin-top: rem(7);
+        }
+      }
+    }
+    .bottomContent {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(40);
+      padding-bottom: rem(40);
+    }
+  }
+}

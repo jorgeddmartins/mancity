@@ -1,0 +1,80 @@
+@use '@styles/base' as *;
+
+.inputWrap {
+  position: relative;
+  width: 100%;
+  height: rem(60);
+  background: $color-white;
+  border-radius: rem(4);
+  border: 0;
+  border-bottom: rem(2) solid rgba($color: $color-midnightBlue, $alpha: 0.5);
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+
+  &:has(input:focus) {
+    border-bottom: rem(2) solid $color-midnightBlue;
+  }
+
+  label {
+    position: absolute;
+    @extend %label;
+    color: rgba($color: $color-midnightBlue, $alpha: 0.5);
+    text-transform: uppercase;
+    top: rem(23);
+    left: rem(13);
+    transition: 0.5s;
+    &.lableUp {
+      color: rgba($color: $color-midnightBlue, $alpha: 1);
+      top: rem(8);
+      left: rem(10);
+      transition: 0.5s;
+      transform: scale(0.714);
+    }
+  }
+
+  &.fieldError label {
+    color: $color-red !important;
+  }
+
+  input {
+    width: 100%;
+    height: rem(35);
+    @extend %labelBold;
+    color: $color-midnightBlue;
+    padding: 0 rem(14) rem(2);
+    border: 0;
+    &:focus {
+      outline: none;
+    }
+    &:focus + label {
+      color: rgba($color: $color-midnightBlue, $alpha: 1);
+      top: rem(8);
+      left: rem(10);
+      transition: 0.5s;
+      transform: scale(0.714);
+    }
+  }
+  .error_msg {
+    position: absolute;
+    left: rem(-6);
+    bottom: rem(-20);
+    @extend %captionBold;
+    color: $color-red;
+    display: flex;
+    padding-left: rem(20);
+    padding-top: rem(5);
+    &::before {
+      content: '';
+      left: 0;
+      top: rem(6);
+      width: rem(14);
+      height: rem(14);
+      background-image: url('../assets/img/exclamationmark.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin-right: rem(7);
+    }
+  }
+}

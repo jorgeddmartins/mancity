@@ -1,0 +1,38 @@
+@use '@styles/base' as *;
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('../assets/img/background-rotated-mask.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(41) rem(27) rem(31) rem(27);
+  .content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: rem(20);
+    box-sizing: border-box;
+    height: 100%;
+    h1 {
+      @extend %h1;
+      color: $color-midnightBlue;
+      text-transform: uppercase;
+    }
+    h3 {
+      max-width: rem(375);
+      @extend %h3;
+      color: $color-midnightBlue;
+      text-align: center;
+    }
+  }
+}

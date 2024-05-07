@@ -1,0 +1,23 @@
+@use '@styles/base' as *;
+
+.button {
+  @extend %h2;
+  width: 100%;
+  height: rem(60);
+  color: $color-white;
+  background: $color-midnightBlue;
+  border-radius: rem(4);
+  text-transform: uppercase;
+  border: 0;
+  &.disabled,
+  &[disabled] {
+    background: $color-light-grey;
+    color: $color-medium-grey;
+    pointer-events: none;
+  }
+  &.borderMidnightblue {
+    border: rem(2) solid $color-midnightBlue;
+    color: $color-midnightBlue;
+    background: $color-white;
+  }
+}

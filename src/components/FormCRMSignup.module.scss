@@ -1,0 +1,129 @@
+@use '@styles/base' as *;
+
+.wrap {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(164.94deg, #3bd6ff 72.68%, #e6ff00 153.68%);
+  display: flex;
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .content {
+    background-image: url('../assets/img/ship.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center rem(110);
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(15) rem(27) rem(41) rem(27);
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+    .logo {
+      width: rem(90);
+      height: rem(90);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+    h1 {
+      max-width: rem(300);
+      @extend %h1;
+      color: $color-midnightBlue;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: rem(8);
+      padding-bottom: rem(23);
+      margin: auto;
+      span {
+        @extend %title;
+        font-style: italic;
+      }
+    }
+    h3 {
+      @extend %h3;
+      color: $color-midnightBlue;
+      text-align: center;
+      padding-bottom: rem(33);
+    }
+
+    .checkToSubmit {
+      display: flex;
+      margin-top: rem(12);
+      align-items: center;
+      column-gap: rem(30);
+      p {
+        @extend %captionBold;
+        color: $color-midnightBlue;
+      }
+    }
+    .bottomContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(25);
+      .legalsText {
+        @extend %captionBold;
+        color: $color-grey;
+        text-align: center;
+        a {
+          @extend %captionBold;
+          color: $color-grey;
+        }
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    margin-bottom: rem(12);
+    .inputField {
+      position: relative;
+      & :global(.MuiInputAdornment-root .MuiButtonBase-root) {
+        opacity: 0;
+      }
+    }
+    button {
+      margin-top: rem(-6);
+    }
+  }
+
+  .formError {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %captionBold;
+    color: $color-red;
+    font-weight: 700;
+    margin-top: rem(25);
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: rem(14);
+      height: rem(14);
+      background-image: url('../assets/img/exclamationmark.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin-right: rem(7);
+    }
+  }
+
+  .formWithError input {
+    color: $color-red !important;
+  }
+}

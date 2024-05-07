@@ -1,0 +1,78 @@
+@use '../styles/base' as *;
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(164.94deg, #3bd6ff 72.68%, #e6ff00 153.68%);
+  display: flex;
+  flex-direction: column;
+
+  .errorContainer {
+    background-image: url('../assets/img/ship.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center rem(110);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 rem(27) 0 rem(27);
+    box-sizing: border-box;
+    display: flex;
+    h1 {
+      @extend %h1Extra;
+      color: $color-midnightBlue;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: rem(8);
+      padding-bottom: rem(21);
+      &.generic {
+        max-width: auto;
+        padding-top: rem(30);
+      }
+      &.error404 {
+        max-width: rem(200);
+      }
+      div {
+        @extend %h1;
+      }
+      span {
+        @extend %h1ItalicExtra;
+        font-size: rem(100);
+        line-height: rem(100);
+      }
+    }
+    .message {
+      @extend %h3;
+      color: $color-midnightBlue;
+      text-align: center;
+    }
+  }
+  .logo {
+    width: rem(90);
+    height: rem(90);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: rem(20) auto;
+  }
+  .bottomContent {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: rem(41);
+  }
+  button {
+    margin-top: rem(70);
+  }
+}

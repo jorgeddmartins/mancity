@@ -1,0 +1,69 @@
+@use '@styles/base' as *;
+
+.wrapDownload {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(164.94deg, #3bd6ff 72.68%, #e6ff00 153.68%);
+  display: flex;
+
+  .contentDownload {
+    background-image: url('../assets/img/ship.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center rem(110);
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(15) rem(27) rem(41) rem(27);
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+    .logo {
+      width: rem(90);
+      height: rem(90);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+    h1 {
+      @extend %title;
+      font-style: italic;
+      color: $color-midnightBlue;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: rem(30);
+      padding-bottom: rem(40);
+    }
+
+    .imageContent {
+      position: relative;
+      width: 100%;
+      height: rem(600);
+      border: rem(6) solid #3bd6ff;
+      background: #d9d9d9;
+      margin-bottom: rem(40);
+      .silhouettes {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .bottomContent {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      row-gap: rem(50);
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: rem(15);
+      }
+    }
+  }
+}

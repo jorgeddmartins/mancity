@@ -1,0 +1,133 @@
+@use 'variables' as *;
+@use 'functions' as *;
+@forward 'fonts';
+
+// fonts used:
+// 800 - 40/80 - condensed extra bold [italic]
+// 800 - 40/80 - condensed extra bold
+// 400 - 16/21 - regular
+// 700 - 24/24 - condensed bold
+// 400 - 12/18 - regular
+// 700 - 14/18 - bold
+// 500 - 10/14 - medium
+
+%font {
+  font-family: $typeface;
+  margin: 0;
+}
+
+%fontCondensed {
+  font-family: $typefaceCond;
+  margin: 0;
+}
+
+%title {
+  @extend %fontCondensed;
+  font-size: rem(54);
+  font-weight: 800;
+  line-height: rem(56);
+  font-style: normal;
+}
+
+%h1 {
+  @extend %fontCondensed;
+  font-size: rem(40);
+  font-weight: 800;
+  line-height: rem(41);
+  font-style: normal;
+}
+
+%h1Extra {
+  @extend %fontCondensed;
+  font-size: rem(60);
+  font-weight: 800;
+  line-height: rem(61);
+  font-style: normal;
+}
+
+%h2 {
+  @extend %fontCondensed;
+  font-size: rem(24);
+  font-weight: 700;
+  line-height: rem(24);
+  font-style: normal;
+}
+
+%h1Italic {
+  @extend %fontCondensed;
+  font-size: rem(40);
+  font-weight: 800;
+  line-height: rem(32);
+  font-style: italic;
+}
+
+%h1ItalicExtra {
+  @extend %fontCondensed;
+  font-size: rem(120);
+  font-weight: 800;
+  line-height: rem(110);
+  font-style: italic;
+}
+
+%h2Italic {
+  @extend %fontCondensed;
+  font-size: rem(24);
+  font-weight: 700;
+  line-height: rem(24);
+  font-style: italic;
+}
+
+%h3 {
+  @extend %font;
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: rem(22);
+}
+
+%h4 {
+  @extend %font;
+  font-size: rem(14);
+  font-weight: 500;
+  line-height: rem(18);
+}
+
+%label {
+  @extend %font;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: rem(15);
+}
+
+%labelBold {
+  @extend %font;
+  font-size: rem(14);
+  font-weight: 500;
+  line-height: rem(15);
+}
+
+%caption {
+  @extend %font;
+  font-size: rem(10);
+  font-weight: 400;
+}
+
+%captionBold {
+  @extend %font;
+  font-size: rem(10);
+  font-weight: 500;
+  line-height: rem(14);
+}
+
+%paragraph {
+  @extend %font;
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: rem(18);
+}
+
+%paragraphLarge {
+  @extend %font;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(21);
+}
